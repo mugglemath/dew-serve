@@ -48,7 +48,7 @@ def handle_sensor_data():
         message = f'{iso_timestamp}\n' + \
                   f'Indoor Temperature = {indoor_temperature} C\n' + \
                   f'Indoor Humidity = {indoor_humidity} %\n' + \
-                  f'Indoor Dewpoint = {indoor_dewpoint} C\n' + \
+                  f'Indoor Dewpoint = {indoor_dewpoint:.2f} C\n' + \
                   f'Outdoor Dewpoint = {outdoor_dewpoint:.2f} C\n'
 
         send_discord_message(message, discord_sensor_feed_webhook_url)
